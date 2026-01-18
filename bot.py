@@ -15,6 +15,7 @@ async def main():
     await db.init(config.db.url)
     await db.create_tables()
     auto_import_handlers()
+    from handlears import pop
 
     await dp.start_polling(bot)
 
